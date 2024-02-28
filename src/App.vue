@@ -13,8 +13,8 @@
   <h3>{{ arrayColor }}</h3>
   <h3 :style="`color: ${arrayColor[3]}`">{{ arrayColor }}</h3>  <!-- color de array uso de comillas invertidas y llave sencilla dentro para poner color -->
   <h4> {{ activo ? "estoy activo" : "estoy inactivo" }}</h4>    <!--estadp condicio directa de vue (if) de variable activo-->
-  <p v-if="!activo"> estoy activo
-  
+  <p v-if="!activo"> estoy activo :l
+  git 
   </p>
 
 </template>
