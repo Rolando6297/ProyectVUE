@@ -1,8 +1,8 @@
 <script setup>
   const name = "Vue Dinamico";
   const color1 = "color: blue";
-  const arrayColor = ["blue", "red", "yellow", "peru"]
-  const activo = false
+  const arrayColor = ["blue", "red", "yellow", "peru"];
+  const activo = true;
 </script>
 
 <template>
@@ -13,9 +13,11 @@
   <h3>{{ arrayColor }}</h3>
   <h3 :style="`color: ${arrayColor[3]}`">{{ arrayColor }}</h3>  <!-- color de array uso de comillas invertidas y llave sencilla dentro para poner color -->
   <h4> {{ activo ? "estoy activo" : "estoy inactivo" }}</h4>    <!--estadp condicio directa de vue (if) de variable activo-->
-  <p v-if="!activo"> estoy activo :l
-  git 
-  </p>
+  <p v-if="activo == false" :style="`color: ${arrayColor[1]}`"> Estoy Inactivo</p><!--if-->
+  <h1 v-else-if ="activo == true" :style="`color: ${arrayColor[3]}`"> Estoy Activo</h1><!--elseif-->
+  <h1 v-else :style="`color: ${arrayColor[3]}`"> Estado desconocido</h1> <!--else--->
+  <h3 v-show="activo">como funcion</h3>
+
 
 </template>
 
